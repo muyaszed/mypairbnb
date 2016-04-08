@@ -1,0 +1,13 @@
+<div class="container-fluid">
+
+<div class="row tetx-center">
+
+		<%=form_for @list, url: @list, method: :patch do |f| %>
+			<%= f.text_field :home_type %>
+			<%= f.text_field :room_type %>
+			<%= f.submit %>
+
+		<%end%>
+	</div>
+
+</div>

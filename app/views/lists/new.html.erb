@@ -1,0 +1,18 @@
+<div class="container-fluid">
+
+	<div class="row text-center">
+		<div class="col-xs-12 list-title"> List your property</div>
+	</div>
+
+	<div class="row tetx-center">
+
+		<%=form_for :list, url: lists_path do |f| %>
+			<%= f.text_field :home_type %>
+			<%= f.text_field :room_type %>
+			<%= f.submit %>
+
+		<%end%>
+	</div>
+
+
+</div>
