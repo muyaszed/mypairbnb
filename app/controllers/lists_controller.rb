@@ -30,9 +30,12 @@ class ListsController < ApplicationController
   end
 
   def create
-  	@list = List.new(list_params)
-  	@list.user_id = current_user.id
-  	@list.save
+    @user = current_user
+    @list = @user.lists.build(list_params) #applying the the built in association methods
+    @list.save
+  	# @list = List.new(list_params)
+  	# @list.user_id = current_user.id
+  	# @list.save
   	redirect_to @list
   end
 
