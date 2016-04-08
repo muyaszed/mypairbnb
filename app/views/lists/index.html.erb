@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="row">
+		<% @list.each do |item| %>
+			<div class="col-md-6">
+			<a href="/lists/<%=item.id%>">
+				<%=item.home_type%>
+				<%=item.room_type%>
+				<p>by <%=item.user.firstname%></p>
+
+			</a>
+				
+				
+			
+			</div>
+		<%end%>
+	</div>
+
+
+	
+</div>

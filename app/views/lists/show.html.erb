@@ -1,0 +1,10 @@
+<div class="container-fluid">
+	<P>Home Type: <%=@list.home_type %></P>
+	<P>Room Type: <%=@list.room_type %></P>
+	<p>				<%if signed_in?%>
+						<%if current_user.id == @list.user_id %>
+							<%= link_to 'Edit', [:edit, @list] %>
+							<%= link_to 'Delete', list_path(@list), method: :delete, data: { confirm: 'Are you sure?' }%>
+						<%end%>
+					<%end%></p>
+</div>
