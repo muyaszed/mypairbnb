@@ -16,7 +16,7 @@ resources :users, only: [:show, :edit, :update, :destroy, :create]
   get "/sign_up" => "clearance/users#new", as: "sign_up"
   get 'welcome/index'
 
-  get 'lists/new' => "list#new"
+ 
 
   get "/auth/:provider/callback" => "sessions#create_from_omniauth"
   # The priority is based upon order of creation: first created -> highest priority.
