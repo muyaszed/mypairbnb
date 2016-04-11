@@ -1,0 +1,47 @@
+<div class="container">
+	<div class="row">
+		<ul class="nav nav-tabs nav-stacked col-md-3" role="tablist">
+	    
+	    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Edit Profile</a></li>
+	    
+		  <li><%= link_to "View Profile", user_path(@user.id) %></li>
+		  
+	
+	    
+	  </ul>
+	  
+	  <!-- Tab panes -->
+	  <div class="tab-content">
+	   
+	    <div role="tabpanel" class="tab-pane active" id="profile">
+	    	 <%= form_for @user, :html => {:multipart => true} do |form| %>
+			   <div class="text-field">
+
+			   	 <%= form.label :firstname %>
+				  <%= form.text_field :firstname, type: 'text' %>
+
+				   <%= form.label :lastname %>
+				  <%= form.text_field :lastname, type: 'text' %>
+
+  
+				  <%= form.label :email %>
+				  <%= form.text_field :email, type: 'email' %>
+
+				  <%= form.label :avatar %>
+				  <%= form.file_field :avatar %>
+				</div>
+
+			    <div class="submit-field">
+			      <%= form.submit %>
+			    </div>
+
+			    
+			  <% end %>
+
+	    </div>
+	    
+	  </div>
+	</div>
+
+
+</div>
