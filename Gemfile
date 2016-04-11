@@ -37,6 +37,9 @@ gem 'carrierwave', '0.10'
 #use for image processing
 gem 'mini_magick'
 
+#support s3 cloud
+gem 'carrierwave-aws'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
