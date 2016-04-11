@@ -30,6 +30,13 @@ gem 'clearance'
 gem 'omniauth'
 
 gem 'omniauth-facebook'
+
+#use for file uploading
+gem 'carrierwave', '0.10'
+
+#use for image processing
+gem 'mini_magick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
