@@ -1,7 +1,50 @@
-// Place all the styles related to the Lists controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.listings {
+	display: inline-block;
+	border: 1px solid grey;
+	width: 32.3%;
+	margin: 5px;
+	height: 300px;
+
+	
+}
+
+.listing-pic {
+		
+		height: 500px;
+		
+		overflow: hidden;
+
+		.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev, .carousel-control .icon-next {
+			margin-top: -150px;
+		}
+		
+
+		.carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+			margin-top: -150px;
+		}
+
+		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+		    
+		    width: 100%;
+		}
+
+		
+}
+
+.index-listing-pic {
+	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    
+    min-height: 250px;
+}
+
+}
+
+
+
 
 .list-title {
+
 	font-size: 50px;
 }

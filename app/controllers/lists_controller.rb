@@ -32,17 +32,16 @@ class ListsController < ApplicationController
   def create
     @user = current_user
     @list = @user.lists.build(list_params) #applying the the built in association methods
+  
     @list.save
-  	# @list = List.new(list_params)
-  	# @list.user_id = current_user.id
-  	# @list.save
+    
   	redirect_to @list
   end
 
   private
 
   def list_params
-  	params.require(:list).permit(:home_type, :room_type)
+  	params.require(:list).permit(:home_type, :room_type, {images: []})
   end
 
   

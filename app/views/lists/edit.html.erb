@@ -2,9 +2,16 @@
 
 <div class="row tetx-center">
 
-		<%=form_for @list, url: @list, method: :patch do |f| %>
-			<%= f.text_field :home_type %>
-			<%= f.text_field :room_type %>
+		<%=form_for @list, url: @list, :html => {:multipart => true}, method: :patch do |f| %>
+			<%= f.label :home_type %><br>
+			<%= f.text_field :home_type %> <br><br>
+
+				<%= f.label :room_type %><br>
+			<%= f.text_field :room_type %><br><br>
+
+			<%= f.label :image %><br>
+			<%= f.file_field :images, multiple: true %>
+			
 			<%= f.submit %>
 
 		<%end%>
