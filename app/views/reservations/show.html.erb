@@ -1,1 +1,21 @@
-testing
+<div class="container">
+	<div class="panel panel-default ">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-8">
+						Make payment for : RM<%=@reservation.list.rental%>
+
+					</div>
+					<div class="col-xs-4 text-center">
+						
+						<%=link_to "Checkout", new_transaction_path(list_id: params[:list_id], reservation_id: params[:id]), data: { no_turbolink: true }, class: "button" unless current_user.reservations.blank?%>
+					</div>
+					
+											
+				</div>
+										
+			</div>
+	</div>
+	
+
+</div>

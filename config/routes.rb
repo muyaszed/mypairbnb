@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'transaction/new'
+
   get 'lists/new'
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
@@ -12,6 +14,8 @@ Rails.application.routes.draw do
 resources :lists do
   resources :reservations
 end
+
+resources :transactions, only: [:new, :create]
 
 resources :users, only: [:show, :edit, :update, :destroy, :create] 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
