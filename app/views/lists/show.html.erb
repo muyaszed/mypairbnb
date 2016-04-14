@@ -1,6 +1,5 @@
 <div class="container-fluid">
 	<div class="row listing-pic">
-
 		
 				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
 				  <!--  -->
@@ -37,19 +36,54 @@
 		
 	</div>
 
-<div class="row">
 	
+		
 
 
-</div>
-	<P>Home Type: <%=@list.home_type %></P>
-	<P>Room Type: <%=@list.room_type %></P>
-	<p>				<%if signed_in?%>
-						<%if current_user.id == @list.user_id %>
-							<%= link_to 'Edit', [:edit, @list] %>
-							<%= link_to 'Delete', list_path(@list), method: :delete, data: { confirm: 'Are you sure?' }%>
-						<%end%>
-					<%end%></p>
+	
+	<div class="after-header container">
+		<div class="row">
+			
+			<div class="col-md-4">
+				<div class="list-avatar">
+	                  <%=image_tag @user.avatar.medium_thumb.url %>
+	             </div>
+			</div>
+			<div class="col-md-4">
+				<P>Home Type: <%=@list.home_type %></P>
+				<P>Room Type: <%=@list.room_type %></P>
+				<p>				<%if signed_in?%>
+									<%if current_user.id == @list.user_id %>
+										<%= link_to 'Edit', [:edit, @list] %>
+										<%= link_to 'Delete', list_path(@list), method: :delete, data: { confirm: 'Are you sure?' }%>
+									<%end%>
+								<%end%></p>
+			</div>
+			<div class="col-md-4">
+				<div class="booking-panel panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">RM <%=@list.rental %>  per night</h3>
+				  </div>
+				  <div class="panel-body">
+
+				  <form action="/lists/<%=@list.id%>/reservations/new" method="get">
+				  	<input name="start_date" type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="<%=@list.start_avail%>" data-date-end-date="<%=@list.end_avail%>"> <br><br>
+				  	<input name="end_date" type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="<%=@list.start_avail%>" data-date-end-date="<%=@list.end_avail%>">
+
+				  	<button class="btn btn-default" type="submit">next</button>
+
+				  </form>
+
+				 
+				   
+				  </div>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+	
 </div>
 
 
