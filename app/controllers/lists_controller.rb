@@ -7,6 +7,8 @@ class ListsController < ApplicationController
 
   def show 
   	@list = List.find(params[:id])
+    @user = @list.user
+    @reservation = @list.reservations.new
   end
 
   def edit
@@ -15,7 +17,8 @@ class ListsController < ApplicationController
 
   def update
   	@list = List.find(params[:id])
-  	@list.update(list_params)
+  	@list.update!(list_params)
+
   	redirect_to @list
   end
 
@@ -41,7 +44,7 @@ class ListsController < ApplicationController
   private
 
   def list_params
-  	params.require(:list).permit(:home_type, :room_type, {images: []})
+  	params.require(:list).permit(:home_type, :room_type, :accomadation, :rental, :city, :start_avail, :end_avail, :description, {images: []})
   end
 
   

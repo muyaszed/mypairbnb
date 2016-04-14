@@ -1,0 +1,32 @@
+<div class="container">
+		
+		<div class="row">
+			<div class="col-xs-12">
+				<ul>
+					<h2>Reservations</h2>
+						<%number = 1 %>
+							<%@reservation_list.each do |item|%>
+							
+								<div class="panel panel-default ">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-xs-2">
+												<%=number%>
+											</div>
+											<div class="col-xs-10">
+												Book from: <%=item.start_book %>  to: <%=item.end_book %>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+									
+							<%number += 1%>	
+							<%end%>
+
+				</ul>
+
+			</div>
+		</div>
+
+</div>

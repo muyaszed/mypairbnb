@@ -42,6 +42,24 @@
 }
 
 
+.list-avatar {
+	width: 100px;
+	height: 100px;
+	display: block;
+	border: 1px solid;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.after-header {
+	padding: 0 100px 0 100px;
+
+	.booking-panel {
+		position: relative;
+		top: -35px;
+	}
+}
+
 
 
 .list-title {
