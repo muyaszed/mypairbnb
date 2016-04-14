@@ -28,6 +28,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #gems for payment gateaway
 gem 'braintree', '~> 2.33.1'
 
+#use to apply ruby code into javascript
+gem 'gon', '~> 5.1.2'
+
 gem 'clearance'
 
 gem 'omniauth'
