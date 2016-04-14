@@ -1,23 +1,114 @@
 <div class="container">
 	<div class="row">
 
-		<div class="col-md-4">
-			<div class="row">
+		
 
-				<div class="col-xs-12 user-avatar">
-					<%=image_tag @user.avatar.thumb.url%>
+		  <!-- Nav tabs -->
+		  <ul class="nav nav-tabs nav-stacked col-md-4" role="tablist">
+		  	<li>
+		  		<div class="user-avatar">
+						<%=image_tag @user.avatar.thumb.url%>
 
 				</div>
+		  	</li>
+		    <li role="presentation" class="active"><a href="#reservations" aria-controls="reservations" role="tab" data-toggle="tab">Reservations</a></li>
+		    <li role="presentation"><a href="#listings" aria-controls="listings" role="tab" data-toggle="tab">Listings</a></li>
+		    
+		  </ul>
 
-			</div>	
+		  <!-- Tab panes -->
+		  <div class="tab-content">
+		    
+		   
+		    <div role="tabpanel" class="tab-pane active" id="reservations">
+		    	
+			    	<div class="col-md-8">
+			    		<h2>Reservations</h2>
+						<%number = 1 %>
+							<%@reservations.each do |item|%>
+							
+								<div class="panel panel-default ">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-xs-2">
+												<%=number%>
+											</div>
+											<div class="col-xs-10">
+												Room type: <%=item.list.room_type %>
+											</div>
+										</div>
+										
+									</div>
+								</div>
+									
+							<%number += 1%>	
+							<%end%>
+			    		
+			    	</div>
+		    	
+		    		
+		    	
+		    	
+		    </div>
+		    <div role="tabpanel" class="tab-pane" id="listings">
+		    	<div class="col-md-8">
+			    		<h2>Listings</h2>
+						<%number = 1 %>
+							<%@lists.each do |item|%>
+							
+								<div class="panel panel-default ">
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-xs-2">
+												<%=number%>
+											</div>
+											<div class="col-xs-10">
+												<div class="row">
+													<div class="col-xs-7">
+														<%=item.home_type %> 
+													</div>
+													<div class="col-xs-5">
+														<%if item.reservations.empty? %>
+															No reservation available
+														<%else%>
+														<%= link_to "Show reservations", list_reservations_path(item.id)%>
+														<%end%>
+													</div>
+												</div>
+												 
+											</div>
+										</div>
+										
+									</div>
+								</div>
+									
+							<%number += 1%>	
+							<%end%>
+			    		
+			    	</div>
 
-		</div>
+		    </div>
+		  </div>
+
+		
 
 
-		<div class="col-md-8">
 
 
-		</div>
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
 
 	</div>
 

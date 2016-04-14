@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/Nerian/bootstrap-datepicker-rails.git
+  revision: 4cc73391f45f1df4138a3421b8cb9ebedb36dc6f
+  specs:
+    bootstrap-datepicker-rails (1.6.0.1)
+      railties (>= 3.0)
+
+GIT
   remote: git://github.com/carrierwaveuploader/carrierwave.git
   revision: aef92fe13925bcb2ef681f7fbb19a59d7a42a104
   specs:
@@ -203,6 +210,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-datepicker-rails!
   bootstrap-sass (~> 3.3.6)
   bootstrap3-datetimepicker-rails (~> 4.17.37)
   byebug

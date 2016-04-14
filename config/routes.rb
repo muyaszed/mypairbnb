@@ -9,8 +9,10 @@ Rails.application.routes.draw do
       controller: "clearance/passwords",
       only: [:create, :edit, :update]
   end
-resources :lists
-resources :reservations
+resources :lists do
+  resources :reservations
+end
+
 resources :users, only: [:show, :edit, :update, :destroy, :create] 
   get "/sign_in" => "clearance/sessions#new", as: "sign_in"
   delete "/sign_out" => "clearance/sessions#destroy", as: "sign_out"
