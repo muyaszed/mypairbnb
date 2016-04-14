@@ -33,8 +33,11 @@
 											<div class="col-xs-2">
 												<%=number%>
 											</div>
-											<div class="col-xs-10">
+											<div class="col-xs-7">
 												Room type: <%=item.list.room_type %>
+											</div>
+											<div class="col-xs-3">
+												<%= link_to "Process", list_reservation_path(item.list.id, item.id), class: "btn btn-default" %>
 											</div>
 										</div>
 										

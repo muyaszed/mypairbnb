@@ -1,0 +1,23 @@
+<div class="container">
+	<div class="panel-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<h2>Please make payment</h2>
+
+					</div>
+					<div class="col-xs-12">
+						
+						<%= form_tag transactions_path(list_id: @list.id, reservation_id: @reservation.id) do%>
+												   
+							<div id="dropin"></div>
+							<%=submit_tag "Pay", class: "button mt1" %>
+						<%end%>
+					</div>
+					
+											
+				</div>
+										
+			</div>
+
+</div>
+	
