@@ -67,6 +67,8 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    braintree (2.33.1)
+      builder (>= 2.0.0)
     builder (3.2.2)
     byebug (8.2.2)
     carrierwave-aws (1.0.0)
@@ -208,6 +210,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-datepicker-rails!
   bootstrap-sass (~> 3.3.6)
+  braintree (~> 2.33.1)
   byebug
   carrierwave!
   carrierwave-aws
