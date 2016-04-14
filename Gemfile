@@ -40,11 +40,9 @@ gem 'mini_magick'
 #support s3 cloud
 gem 'carrierwave-aws'
 
-#gem rquired for bootstrap date picker
-gem 'momentjs-rails', '>= 2.9.0'
-
-#user for date picker
-gem 'bootstrap3-datetimepicker-rails', '~> 4.17.37'
+#for datepicker with bootstrap
+gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
+                              :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

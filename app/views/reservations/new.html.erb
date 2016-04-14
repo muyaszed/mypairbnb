@@ -1,0 +1,30 @@
+<div class="container">
+
+	<div class="col-xs-12">
+		<p>Your reservation</p>	
+
+	</div>
+	<div class="col-xs-12">
+		
+		<div class="reservation-panel panel panel-default">
+				  <div class="panel-heading">
+				    <h3 class="panel-title">RM <%=@list.rental %>  per night</h3>
+				  </div>
+				  <div class="panel-body">
+				    <%= form_for [@list, @reservation] do |f| -%>
+					<%= f.label :start_date %>
+				 	<%= f.text_field :start_book, "data-provide" => 'datepicker', "data-date-format" => "yyyy-mm-dd", "data-date-start-date" => "#{@list.start_avail}", "data-date-end-date" => "#{@list.end_avail}", "value" => "#{params[:start_date]}" %>
+
+				  	<%= f.label :end_date %>
+				  	<%= f.text_field :end_book, "data-provide" => 'datepicker', "data-date-format" => "yyyy-mm-dd", "data-date-start-date" => "#{@list.start_avail}", "data-date-end-date" => "#{@list.end_avail}", "value" => "#{params[:end_date]}" %>
+
+					<%= f.submit %>
+				  
+				 
+				<% end -%>
+				  </div>
+				</div>
+	</div>
+
+</div>
+
