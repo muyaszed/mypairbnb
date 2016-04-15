@@ -11,10 +11,31 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require turbolinks
 //= require bootstrap-datepicker
+//= require turbolinks
 //= require_tree .
 
 
+
+
+
+
+$(document).ready(function () {
+	if($("body").hasClass("lists") || $("body").hasClass("users") || $("body").hasClass("sessions") || $("body").hasClass("")) {
+		$(".navbar-right").find("a").css("color", "#5E5E5E");
+		$(".navbar-brand").css("color", "#5E5E5E");
+	}
+
+		
+	
+
+		
+
+
+	
+	
+
+});

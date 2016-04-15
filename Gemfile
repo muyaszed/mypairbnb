@@ -31,6 +31,9 @@ gem 'braintree', '~> 2.33.1'
 #use to apply ruby code into javascript
 gem 'gon', '~> 5.1.2'
 
+#fix jquery turbolink issue
+gem 'jquery-turbolinks'
+
 gem 'clearance'
 
 gem 'omniauth'
