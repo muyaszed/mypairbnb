@@ -1,4 +1,5 @@
 <div class="container">
+	<div class="row"><%=notice%></div>
 	<div class="row">
 
 		
@@ -34,10 +35,15 @@
 												<%=number%>
 											</div>
 											<div class="col-xs-7">
-												Room type: <%=item.list.room_type %>
+												From: <%=item.start_book%> To: <%=item.end_book%>     |   Room type: <%=item.list.room_type %>  |  Total days: <%=(item.end_book.to_date - item.start_book.to_date).to_i%> | Total amount: RM<%=item.total%>
 											</div>
 											<div class="col-xs-3">
-												<%= link_to "Process", list_reservation_path(item.list.id, item.id), class: "btn btn-default" %>
+												<%if item.status == "authorized"%>
+													<%= link_to "Show Reciept", class: "btn btn-default" %>
+												<%else%>
+												<%= link_to "Make Payment", list_reservation_path(item.list.id, item.id), class: "btn btn-default" %>
+
+												<%end%>
 											</div>
 										</div>
 										
