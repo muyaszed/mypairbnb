@@ -8,7 +8,9 @@ class ListsController < ApplicationController
   def show 
   	@list = List.find(params[:id])
     @user = @list.user
-    @reservation = @list.reservations.new
+    # @reservation = @list.reservations.new
+
+    
   end
 
   def edit

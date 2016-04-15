@@ -36,6 +36,11 @@
 .index-listing-pic {
 	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
     
+	    min-height: 250px;
+	}
+
+	.carousel-inner > .active {
+    
     min-height: 250px;
 }
 
