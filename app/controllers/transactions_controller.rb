@@ -14,11 +14,12 @@ class TransactionsController < ApplicationController
   def create
   	@reservation = Reservation.find(params[:reservation_id])
     @result = Braintree::Transaction.sale(
-              amount: @reservation.list.rental,
+              amount: @reservation.total,
               payment_method_nonce: params[:payment_method_nonce])
     if @result.success?
-    	byebug
-      # current_user.purchase_cart_movies!
+      
+    	@reservation.update(status: @result.transaction.status, transaction_id: @result.transaction.id)
+      
       redirect_to user_path(@reservation.user_id), notice: "Congraulations! Your transaction has been successfully!"
     else
       flash[:alert] = "Something went wrong while processing your transaction. Please try again!"
@@ -39,6 +40,8 @@ class TransactionsController < ApplicationController
   def generate_client_token
   	Braintree::ClientToken.generate
   end
+
+  
 end
 
 

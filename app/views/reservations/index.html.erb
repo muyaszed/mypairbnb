@@ -14,7 +14,7 @@
 												<%=number%>
 											</div>
 											<div class="col-xs-10">
-												Book from: <%=item.start_book %>  to: <%=item.end_book %>
+												Book from: <%=item.start_book %>  to: <%=item.end_book %> |  <%if item.status == "authorized"%> Status: Paid <%else%> Status: Open<%end%>
 											</div>
 										</div>
 										
