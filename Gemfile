@@ -49,6 +49,9 @@ gem 'mini_magick'
 #support s3 cloud
 gem 'carrierwave-aws'
 
+#gems for search engine
+gem "pg_search"
+
 #for datepicker with bootstrap
 gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
                               :git => 'git://github.com/Nerian/bootstrap-datepicker-rails.git'

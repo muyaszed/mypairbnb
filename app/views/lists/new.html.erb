@@ -23,10 +23,10 @@
 			<%= f.text_field :city %> <br><br>
 
 			<%= f.label :start_avail %><br>
-			<%= f.text_field :start_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy' %> <br><br>
+			<%= f.text_field :start_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy', "data-date-start-date" => "0d" %> <br><br>
 
 			<%= f.label :end_avail %><br>
-			<%= f.text_field :end_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy' %> <br><br>
+			<%= f.text_field :end_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy', "data-date-start-date" => "0d" %> <br><br>
 			
 			<%= f.label :description %><br>
 			<%= f.text_area :description %><br><br>
