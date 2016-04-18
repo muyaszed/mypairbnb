@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'searches/index'
+
   get 'transaction/new'
 
   get 'lists/new'
@@ -16,6 +18,8 @@ resources :lists, only: [:new]
 resources :lists do
   resources :reservations
 end
+
+# resource :search, only: [:create]
 
 resources :transactions, only: [:new, :create]
 
