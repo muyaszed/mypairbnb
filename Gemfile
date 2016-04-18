@@ -40,6 +40,9 @@ gem 'omniauth'
 
 gem 'omniauth-facebook'
 
+#gem to include the important bits in a web app
+gem 'rails_12factor', group: :production
+
 #use for file uploading
 gem 'carrierwave', github:'carrierwaveuploader/carrierwave'
 
@@ -60,7 +63,10 @@ gem 'bootstrap-datepicker-rails', :require => 'bootstrap-datepicker-rails',
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
+
+gem 'rack-timeout'
+
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
