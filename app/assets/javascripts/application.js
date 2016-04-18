@@ -24,7 +24,7 @@
 
 
 $(document).ready(function () {
-	if($("body").hasClass("lists") || $("body").hasClass("users") || $("body").hasClass("sessions") || $("body").hasClass("")) {
+	if($("body").hasClass("lists") || $("body").hasClass("users") || $("body").hasClass("sessions") || $("body").hasClass("searches")) {
 		$(".navbar-right").find("a").css("color", "#5E5E5E");
 		$(".navbar-brand").css("color", "#5E5E5E");
 	}

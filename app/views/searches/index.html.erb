@@ -1,0 +1,157 @@
+<div class="container">
+	<div class="row text-center">
+	  <%if !@result.empty?%>
+	  <%status = 0%>
+		<% @result.each do |item| item = item.searchable%>
+			<%if @start == nil or @end == nil%>
+				<%status += 1%>
+				<div class=" listings col-md-4">
+
+						<div class="row index-listing-pic ">
+							<div id="carousel-example-generic-<%=item.id%>" class="carousel slide" data-ride="carousel" data-interval="false">
+							  <!--  -->
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+							    <div class="item active">
+							       <% if !item.images.empty? %>	
+							     		<%=  image_tag item.images[0].url %>
+							       <%end%>
+							      
+							    </div>
+
+
+							    <% if !item.images.empty? %>
+
+								     <%item.images[1..-1].each do |picture| %>
+								    	<div class="item">
+								    		<%= image_tag picture.url %>
+								    	</div>
+								    <%end%>
+							    <%end%>
+
+							    
+							     
+							    
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic-<%=item.id%>" role="button" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic-<%=item.id%>" role="button" data-slide="next">
+							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+
+
+						</div>
+
+						<div class="row">
+							<a href="/lists/<%=item.id%>">
+
+
+
+
+								<%=item.home_type%>
+								<%=item.room_type%>
+								<p>by <%=item.user.firstname%></p>
+
+							</a>
+
+
+						</div>
+
+					
+						
+						
+					
+				</div>
+
+			<%else%>
+			
+
+				<%if item.start_avail <= @start and item.end_avail >= @end%>
+					<%status += 1%>
+					<div class=" listings col-md-4">
+
+						<div class="row index-listing-pic ">
+							<div id="carousel-example-generic-<%=item.id%>" class="carousel slide" data-ride="carousel" data-interval="false">
+							  <!--  -->
+
+							  <!-- Wrapper for slides -->
+							  <div class="carousel-inner" role="listbox">
+							    <div class="item active">
+							       <% if !item.images.empty? %>	
+							     		<%=  image_tag item.images[0].url %>
+							       <%end%>
+							      
+							    </div>
+
+
+							    <% if !item.images.empty? %>
+
+								     <%item.images[1..-1].each do |picture| %>
+								    	<div class="item">
+								    		<%= image_tag picture.url %>
+								    	</div>
+								    <%end%>
+							    <%end%>
+
+							    
+							     
+							    
+							  </div>
+
+							  <!-- Controls -->
+							  <a class="left carousel-control" href="#carousel-example-generic-<%=item.id%>" role="button" data-slide="prev">
+							    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+							    <span class="sr-only">Previous</span>
+							  </a>
+							  <a class="right carousel-control" href="#carousel-example-generic-<%=item.id%>" role="button" data-slide="next">
+							    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+							    <span class="sr-only">Next</span>
+							  </a>
+							</div>
+
+
+						</div>
+
+						<div class="row">
+							<a href="/lists/<%=item.id%>">
+
+
+
+
+								<%=item.home_type%>
+								<%=item.room_type%>
+								<p>by <%=item.user.firstname%></p>
+
+							</a>
+
+
+						</div>
+
+					
+						
+						
+					
+					</div>
+
+				<%end%>
+			<%end%>
+			
+		<%end%> <!--end of @result loop -->
+		<%if status == 0 %>
+			<h2>Sorry, no result was found. Please search again</h2>
+		<%end%>
+	  <%else%>
+		 <h2>Sorry, no result was found. Please search again</h2>
+	  <%end%>
+	</div>
+
+
+	
+</div
