@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get 'lists/new'
 
   resources :passwords, controller: "clearance/passwords", only: [:create, :new]
-  resource :session, controller: "clearance/sessions", only: [:create]
+  resource :session, controller: "clearance/sessions", only: [:create, :destroy]
 # resources :users, only: [:show, :edit, :update, :destroy] 
   resources :users, controller: "clearance/users", only: [:create] do
     resource :password,
