@@ -1,73 +1,78 @@
 
 
-.listings {
-	display: inline-block;
-	border: 1px solid grey;
-	width: 32.3%;
-	margin: 5px;
-	height: 300px;
 
-	
-}
+@media (min-width: $screen-md-min) { 
 
-.listing-pic {
+	.listings {
+		display: inline-block;
+		border: 1px solid grey;
+		width: 32.3%;
+		margin: 5px;
+		height: 300px;
+
 		
-		height: 500px;
-		
-		overflow: hidden;
+	}
 
-		.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev, .carousel-control .icon-next {
-			margin-top: -150px;
-		}
-		
+	.listing-pic {
+			
+			height: 500px;
+			
+			overflow: hidden;
 
-		.carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
-			margin-top: -150px;
-		}
+			.carousel-control .glyphicon-chevron-left, .carousel-control .icon-prev, .carousel-control .icon-next {
+				margin-top: -150px;
+			}
+			
 
+			.carousel-control .glyphicon-chevron-right, .carousel-control .icon-prev, .carousel-control .icon-next {
+				margin-top: -150px;
+			}
+
+			.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+			    
+			    width: 100%;
+			}
+
+			
+	}
+
+	.index-listing-pic {
 		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-		    
-		    width: 100%;
+	    
+		    min-height: 250px;
 		}
 
-		
-}
-
-.index-listing-pic {
-	.carousel-inner > .item > img, .carousel-inner > .item > a > img {
-    
+		.carousel-inner > .active {
+	    
 	    min-height: 250px;
 	}
 
-	.carousel-inner > .active {
-    
-    min-height: 250px;
-}
-
-}
-
-
-.list-avatar {
-	width: 100px;
-	height: 100px;
-	display: block;
-	border: 1px solid;
-	border-radius: 50%;
-	overflow: hidden;
-}
-
-.after-header {
-	padding: 0 100px 0 100px;
-
-	.booking-panel {
-		position: relative;
-		top: -35px;
 	}
-}
+
+
+	.list-avatar {
+		width: 100px;
+		height: 100px;
+		display: block;
+		border: 1px solid;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	.after-header {
+		padding: 0 100px 0 100px;
+
+		.booking-panel {
+			position: relative;
+			top: -35px;
+		}
+	}
 
 
 
-.list-title {
+	.list-title {
 
-	font-size: 50px;
+		font-size: 50px;
+	}
+
 }
