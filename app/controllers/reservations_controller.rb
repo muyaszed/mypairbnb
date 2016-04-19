@@ -23,7 +23,7 @@ class ReservationsController < ApplicationController
 		@list = List.find(params[:list_id])
 		@reservation = @list.reservations.build(reservation_params)
 		@reservation.update(user_id: current_user.id, total: count_total_amount)
-		ReservationMailer.booking_email(current_user, @list.user, @reservation.id, @reservation.total, list_path(params[:list_id]), list_reservation_path(params[:list_id], @reservation.id)).deliver_now
+		ReservationMailer.booking_email(current_user, @list.user, @reservation.id, @reservation.total, list_url(params[:list_id]), list_reservation_url(params[:list_id], @reservation.id)).deliver_now
 		redirect_to current_user
 	end
 
