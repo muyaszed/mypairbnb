@@ -8,7 +8,7 @@
 					</div>
 					<div class="col-xs-4 text-center">
 						<%if @reservation.user.id == current_user.id%>	
-							<%=link_to "Checkout", new_transaction_path(list_id: params[:list_id], reservation_id: params[:id]), data: { no_turbolink: true }, class: "button" unless current_user.reservations.blank?%>
+							<%=link_to "Checkout", new_transaction_path(list_id: params[:list_id], reservation_id: params[:id]), data: { no_turbolink: true }, class: "button" unless current_user.reservations.blank?%>  |  <%= link_to 'Delete', list_reservation_path(@reservation.list_id, @reservation.id), method: :delete, data: { confirm: 'Are you sure?' }%>
 						
 							
 						<%end%>
@@ -22,3 +22,4 @@
 	
 
 </div>
+

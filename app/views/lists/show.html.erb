@@ -50,6 +50,7 @@
 	             </div>
 			</div>
 			<div class="col-md-4">
+			<p> Available check-in date: <%=@list.start_avail.strftime("%A %e %B %Y")%> to <%=@list.end_avail.strftime("%A %e %B %Y")%></p>
 				<P>Home Type: <%=@list.home_type %></P>
 				<P>Room Type: <%=@list.room_type %></P>
 				<p>				<%if signed_in?%>
@@ -67,8 +68,8 @@
 				  <div class="panel-body">
 
 				  <form action="/lists/<%=@list.id%>/reservations/new" method="get">
-				  	<input name="start_date" type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="<%=@list.start_avail%>" data-date-end-date="<%=@list.end_avail%>"> <br><br>
-				  	<input name="end_date" type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="<%=@list.start_avail%>" data-date-end-date="<%=@list.end_avail%>">
+				  	<input name="start_date" type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="<%=@list.start_avail%>" data-date-end-date="<%=@list.end_avail%>" data-date-dates-disabled="<%=@not%>"> <br><br>
+				  	<input name="end_date" type="text" class="form-control" data-provide="datepicker" data-date-format="yyyy-mm-dd" data-date-start-date="<%=@list.start_avail+1%>" data-date-end-date="<%=@list.end_avail+1%>" data-date-dates-disabled="<%=@not_end%>">
 
 				  	<button class="btn btn-default" type="submit">next</button>
 
