@@ -12,8 +12,8 @@ class ReservationMailer < ApplicationMailer
   end
 
 
-  def booking_email(customer, host, reservation_id, total_amount, listing_link, reservation_link)
-
+  def booking_email(list, customer, host, reservation_id, total_amount, listing_link, reservation_link)
+    @list = list
   	@customer = customer
   	@host = host
   	@id = reservation_id
@@ -21,7 +21,7 @@ class ReservationMailer < ApplicationMailer
   	@reservation_link = reservation_link
   	@listing_link = listing_link
 
-  	mail(to: @host.email, subject:"You've got a reservation for PairVnV")
+  	mail(to: @host.email, subject:"You've got a reservation for #{@list.home_type} in PairVnV(#{@id})")
 
   end
 end

@@ -34,6 +34,9 @@ gem 'gon', '~> 5.1.2'
 #fix jquery turbolink issue
 gem 'jquery-turbolinks'
 
+#for background work
+gem 'sidekiq'
+
 gem 'clearance'
 
 gem 'omniauth'

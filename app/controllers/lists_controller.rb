@@ -18,9 +18,13 @@ class ListsController < ApplicationController
       
     end
     
+
+    if !@not.empty?
     
-    temp = (@not[-1].to_date + 1).to_s
-    @not_end << temp
+      temp = (@not[-1].to_date + 1).to_s
+      @not_end << temp
+
+    end
      
     # @reservation = @list.reservations.new
 
