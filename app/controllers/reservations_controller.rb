@@ -27,7 +27,7 @@ class ReservationsController < ApplicationController
 		@list.not_avail["#{@reservation.id}"] = generate_days
 	      
 	    @list.save
-		ReservationMailer.booking_email(current_user, @list.user, @reservation.id, @reservation.total, list_url(params[:list_id]), list_reservation_url(params[:list_id], @reservation.id)).deliver_now
+		ReservationJob.perform_later(@list, current_user, @list.user, @reservation.id, @reservation.total, list_url(params[:list_id]), list_reservation_url(params[:list_id], @reservation.id))
 		
 	    
 
