@@ -8,7 +8,22 @@ class ListsController < ApplicationController
   def show 
   	@list = List.find(params[:id])
     @user = @list.user
+    @not = []
+    @not_end =[]
+    @list.not_avail.each do |key, item|
+      @not << item
+      @not_end << item
+      @not = @not.flatten
+      @not_end = @not_end.flatten
+      
+    end
+    
+    
+    temp = (@not[-1].to_date + 1).to_s
+    @not_end << temp
+     
     # @reservation = @list.reservations.new
+
 
     
   end
@@ -35,10 +50,12 @@ class ListsController < ApplicationController
   end
 
   def create
+    
     @user = current_user
+    
     @list = @user.lists.build(list_params) #applying the the built in association methods
   
-    @list.save
+    
     
   	redirect_to @list
   end
@@ -48,6 +65,8 @@ class ListsController < ApplicationController
   def list_params
   	params.require(:list).permit(:home_type, :room_type, :accomadation, :rental, :city, :start_avail, :end_avail, :description, {images: []})
   end
+
+ 
 
   
 end
