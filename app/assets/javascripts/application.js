@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
@@ -28,6 +29,15 @@ $(document).ready(function () {
 		$(".navbar-right").find("a").css("color", "#5E5E5E");
 		$(".navbar-brand").css("color", "#5E5E5E");
 	}
+
+	$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+      $( ".social-wrapper" ).show( "slide", { direction: "down"}, 1000 );
+   }
+   if($(window).scrollTop() + $(window).height() <= $(document).height() - 50) {
+      $( ".social-wrapper" ).hide( "slide", { direction: "down"}, 1000 );
+   }
+});
 
 		
 	

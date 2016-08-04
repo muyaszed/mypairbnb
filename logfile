@@ -1,0 +1,6 @@
+LOG:  database system was shut down at 2016-08-04 15:49:56 MYT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
+FATAL:  database "pairbnb_development" does not exist
+FATAL:  database "pairbnb_test" does not exist

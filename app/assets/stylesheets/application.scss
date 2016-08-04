@@ -3,6 +3,8 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "bootstrap-datepicker3";
+@import "font-awesome";
+@import "jquery-ui";
 @import "lists";
 @import "users";
 @import "reservations";
@@ -48,5 +50,27 @@ a.navbar-brand {
 
 #user-menu {
 	margin-top: -14px;
+}
+
+footer {
+	height: 300px;
+	background-color: #2B2D2E;
+	background-image: url("http://www.transparenttextures.com/patterns/cubes.png");
+
+	.social-wrapper{
+		display: none;
+		position: relative;
+		top: 100px;
+
+		.circle {
+			border: 1px solid white;
+			height: 60px;
+			width: 60px;
+			border-radius: 50%;
+			padding: 10px 10px 10px 10px;
+		}
+	}
+
+
 }
 
