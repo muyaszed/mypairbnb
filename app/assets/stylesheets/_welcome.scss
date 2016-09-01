@@ -84,28 +84,28 @@
 	}
 
 	.america {
-		background-image: url("america.jpg");
+		background-image: image-url("america.jpg");
 		background-size: cover;
 	}
 
 	.asia {
-		background-image: url("asia.jpg");
+		background-image: image-url("asia.jpg");
 		background-size: cover;
 	}
 
 	.africa {
-		background-image: url("africa.jpg");
+		background-image: image-url("africa.jpg");
 		background-size: cover;
 	}
 
 	.europe {
-		background-image: url("europe.jpg");
+		background-image: image-url("europe.jpg");
 		background-size: cover;
 
 	}
 
 	.australia {
-		background-image: url("australia.jpg");
+		background-image: image-url("australia.jpg");
 		background-size: cover;
 	}
 }
