@@ -2,18 +2,29 @@
 
 This is a clone develope for learning purposes using Ruby on Rails. Below are the gems/technology used in this application
 
-#Database - Postgresql
-#server - Unicorn
-#User management - Clearance, Omniauth
-#File uploads - Carrierwave
-#Front-end - Bootstrap
-#Searching - PG Search
-#Image processing - Minimagik
-#Background work - Sidekick
-#Payment system - Braintree
-#Security - Figaro
-#Testing - Rspec
-#File storage - local/Amazon S3
+Database - Postgresql
+
+server - Unicorn
+
+User management - Clearance, Omniauth
+
+File uploads - Carrierwave
+
+Front-end - Bootstrap
+
+Searching - PG Search
+
+Image processing - Minimagik
+
+Background work - Sidekick
+
+Payment system - Braintree
+
+Security - Figaro
+
+Testing - Rspec
+
+File storage - local/Amazon S3
 
 Here is the demo in Heroku - DEMO[http://pairvnv.heroku.com]
 
