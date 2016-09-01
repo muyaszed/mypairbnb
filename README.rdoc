@@ -1,28 +1,20 @@
-== README
+== Air Bnb Clone 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a clone develope for learning purposes using Ruby on Rails. Below are the gems/technology used in this application
 
-Things you may want to cover:
+Database - Postgresql
+server - Unicorn
+User management - Clearance, Omniauth
+File uploads - Carrierwave
+Front-end - Bootstrap
+Searching - PG Search
+Image processing - Minimagik
+Background work - Sidekick
+Payment system - Braintree
+Security - Figaro
+Testing - Rspec
+File storage - local/Amazon S3
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Here is the demo in Heroku - DEMO[http://pairvnv.heroku.com]
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
