@@ -40,6 +40,7 @@
 		.carousel-inner > .item > img, .carousel-inner > .item > a > img {
 	    
 		    min-height: 250px;
+		    position: fixed;
 		}
 
 		.carousel-inner > .active {
@@ -60,7 +61,7 @@
 	}
 
 	.after-header {
-		padding: 0 100px 0 100px;
+		padding: 100px 100px 0 100px;
 
 		.booking-panel {
 			position: relative;
@@ -73,6 +74,10 @@
 	.list-title {
 
 		font-size: 50px;
+	}
+
+	.edit_list {
+		padding: 0 300px 200px 300px;
 	}
 
 }

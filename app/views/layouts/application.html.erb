@@ -31,7 +31,8 @@
       
       
           <ul class="nav navbar-nav navbar-right">
-            <li><a id="new-list" href="lists/new">Become A Host</a></li>
+          
+            <li><%= link_to "Become A Host", lists_new_path %></li>
             <li><a href="#">Help</a></li>
             <% if signed_in? -%>
               <li id="user-menu" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -43,8 +44,10 @@
                 <%end%>
               </li>
               <ul class="dropdown-menu" aria-labelledby="user-menu">
+                  <li><%= link_to "View Profile", user_path(current_user) %></li>
                  <li><%= link_to "Edit Profile", [:edit, current_user]%></li>
                  <li><%= link_to t(".sign_out"), sign_out_path, method: :delete %></li>
+
               </ul>
 
 

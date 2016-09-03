@@ -1,37 +1,75 @@
 <div class="container-fluid">
 
-<div class="row text-center">
+<div class="row ">
 
 		<%=form_for @list, url: @list, :html => {:multipart => true}, method: :patch do |f| %>
-			<%= f.label :home_type %><br>
-			<%= f.text_field :home_type %> <br><br>
 
-			<%= f.label :room_type %><br>
-			<%= f.text_field :room_type %><br><br>
+		<div class="form-group">
+			<%= f.label :home_type %>
+			<%= f.text_field :home_type, class: 'form-control' %> 
 
-			<%= f.label :accomadation %><br>
-			<%= f.text_field :accomadation %> <br><br>
+		</div>
 
-			<%= f.label :rental %><br>
-			<%= f.text_field :rental %> <br><br>
+		<div class="form-group">
 
-			<%= f.label :city %><br>
-			<%= f.text_field :city %> <br><br>
+			<%= f.label :room_type %>
+			<%= f.text_field :room_type, class: 'form-control' %>
 
-			<%= f.label :start_avail %><br>
-			<%= f.text_field :start_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy' %> <br><br>
+		</div>
 
-			<%= f.label :end_avail %><br>
-			<%= f.text_field :end_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy' %> <br><br>
+		<div class="form-group">
+
+			<%= f.label :accomadation %>
+			<%= f.text_field :accomadation, class: 'form-control' %> 
+
+		</div>
+
+		<div class="form-group">
+
+			<%= f.label :rental %>
+			<%= f.text_field :rental, class: 'form-control' %> 
+		</div>
+
+		<div class="form-group">
+
+			<%= f.label :city %>
+			<%= f.text_field :city, class: 'form-control' %> 
+
+		</div>
+
+		<div class="form-group">
+
+			<%= f.label :start_avail %>
+			<%= f.text_field :start_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy', class: 'form-control' %> 
+
+		</div>
+
+		<div class="form-group">
+
+			<%= f.label :end_avail %>
+			<%= f.text_field :end_avail, "data-provide" => 'datepicker', "data-date-format" => 'dd-mm-yyyy', class: 'form-control' %> 
+		</div>
+
+		<div class="form-group">
 			
-			<%= f.label :description %><br>
-			<%= f.text_area :description %><br><br>
+			<%= f.label :description %>
+			<%= f.text_area :description, class: 'form-control' %>
 
-			<%= f.label :pictures %><br>
-			<%= f.file_field :images, multiple: true %><br><br>
+		</div>
+
+		<div class="form-group">
+
+			<%= f.label :pictures %>
+			<%= f.file_field :images, multiple: true %>
+
+		</div>
+
+		<div class="form-group pull-right">
 			
 			
-			<%= f.submit %>
+			<%= f.submit class: 'btn btn-default'%>
+			<%= link_to "Cancel", list_path(@list),  class: 'btn btn-default'%>
+		</div>
 
 		<%end%>
 	</div>

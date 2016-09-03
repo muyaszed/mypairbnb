@@ -56,9 +56,9 @@ class ListsController < ApplicationController
   def create
     
     @user = current_user
-    
+    # byebug
     @list = @user.lists.build(list_params) #applying the the built in association methods
-  
+    @list.save
     
     
   	redirect_to @list
